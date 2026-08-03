@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    --color-fondo: #0F1418;
+    --color-superficie: #1A2129;
+    --color-acento: #E8615A;
+    --color-wasabi: #7A9B76;
+    --color-arroz: #F5F1E8;
+
+    --font-display: "Zen Kaku Gothic New", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

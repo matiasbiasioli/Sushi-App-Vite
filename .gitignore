@@ -1,0 +1,11 @@
+# Dependencias (se reinstalan con npm install, no hace falta subirlas)
+node_modules/
+
+# Variables de entorno (contienen datos sensibles, nunca se suben)
+.env
+
+# Carpeta de build del frontend (se genera con npm run build)
+frontend/dist/
+
+# Archivos del sistema operativo / editor
+.DS_Store
