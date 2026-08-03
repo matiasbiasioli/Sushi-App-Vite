@@ -7,7 +7,13 @@ const adminRoutes = require('./routes/admin');
 
 const app = express();
 
-app.use(cors());
+// Solo aceptamos pedidos desde el dominio del frontend (variable de entorno).
+// En desarrollo local, si FRONTEND_URL no está definida, permitimos cualquier
+// origen (comportamiento actual) para no romper el flujo de trabajo local.
+app.use(cors({
+    origin: process.env.FRONTEND_URL || '*'
+}));
+
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/pedidos', pedidosRoutes);
